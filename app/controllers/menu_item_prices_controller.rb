@@ -1,0 +1,2 @@
+class MenuItemPricesController < ApplicationController
+end
