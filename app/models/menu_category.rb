@@ -1,4 +1,8 @@
 class MenuCategory < ActiveRecord::Base
-has_many :restaurant_menu_categories
-has_many :restaurant_menus, through: :restaurant_menu_categories
+  belongs_to :menu
+  has_many :menu_items, :dependent => :destroy
+
+  def name_with_details
+    "#{self.menu.name} - #{name} - #{self.menu.restaurant.name}"
+  end
 end

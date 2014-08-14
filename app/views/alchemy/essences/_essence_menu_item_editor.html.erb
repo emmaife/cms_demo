@@ -1,0 +1,28 @@
+<%#
+  Available locals:
+  * content (The object the essence is linked to the element)
+  * html_options
+
+  Please consult Alchemy::Content.rb docs for further methods on the content object
+%>
+
+<% cache(content) do %>
+<div class="content_editor EssenceMenuItem" id="<%= content.dom_id %>">
+  
+  <%= label_and_remove_link(content) %>
+  Menu Item: <%= text_field_tag(
+    content.form_field_name(:name),
+    content.essence.name,
+    :id => content.form_field_id(:name)
+  ) %>
+
+    Price: <%= text_field_tag(
+    content.form_field_name(:price),
+    content.essence.price,
+    :id => content.form_field_id(:price)
+  ) %>
+
+
+
+</div>
+<% end %>

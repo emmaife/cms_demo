@@ -1,0 +1,17 @@
+
+
+<%= alchemy_form_for resource_instance_variable, url: resource_path(resource_instance_variable) do |f| %>
+  <% resource_handler.attributes.each do |attribute| %>
+    <% if attribute[:name] == "restaurant_id" %>
+        <%=f.label "Restaurant"%><%= f.collection_select :restaurant_id, @restaurants, :id, :name%></br>
+
+    <% else %>
+      <%= f.input attribute[:name], resource_attribute_field_options(attribute) %>
+    <% end %>
+  <% end %>
+  
+
+  <%= f.submit _t(:save) %>
+<% end %>
+
+

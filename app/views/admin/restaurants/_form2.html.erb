@@ -1,0 +1,12 @@
+<%= form_for [:admin, @restaurant], url: main_app.admin_restaurants_path do |f| %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+
+    <%= f.collection_select :restaurant_group_id, @restaurant_groups, :id, :name%>
+
+      <%= f.submit %>
+<%end%>

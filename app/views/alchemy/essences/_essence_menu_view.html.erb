@@ -1,0 +1,17 @@
+<%# The content object holds the essence %>
+
+  <% if content.ingredient.nil? %>
+  <%= "" %>
+  <% else %>
+<% menu = Menu.find_by_id(content.ingredient)%>
+<center><h1><%= menu.name%></h1>
+
+<% menu.menu_categories.each do |c|%>
+  <h3><%= c.name %></h3>
+
+  <% c.menu_items.each do |i| %>
+<%= i.name %></br>
+  <%end%>
+  <%end%>
+  <%end%>
+</center>

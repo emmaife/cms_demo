@@ -1,0 +1,68 @@
+<div class="hsep"></div>
+<div class="page-content-wrapper">
+  <div class="page-content page-content-2">
+  
+  
+    
+
+<div class="index-page-image-wrapper">
+
+<div class="index-page-images">
+
+<div class="index-page-image">
+
+<div id="JSSlideShow1">
+  <%= render_elements only: 'left_images' %>
+</div>
+</div>
+
+<div class="index-page-image">
+
+<div id="JSSlideShow2">
+    <%= render_elements only: 'center_images' %>
+
+</div>
+</div>
+
+<div class="index-page-image">
+    <%= render_elements only: 'right_images' %>
+
+<div id="JSSlideShow3">
+
+
+</div>
+</div>
+
+</div>  
+</div>  
+
+  
+  </div>
+
+
+
+</div>
+
+
+<div class="cleared"></div>
+
+<div class="hsep"></div>
+            
+        <div class="cleared"></div>
+      </div>
+    </div>
+
+
+<%- cache(element) do -%>
+  <%= element_view_for(element) do |el| -%>
+    <div class="left_image">
+      <%= el.render :left_image %>
+    </div>
+    <div class="center_image">
+      <%= el.render :center_image %>
+    </div>
+    <div class="right_image">
+      <%= el.render :right_image %>
+    </div>
+  <%- end -%>
+<%- end -%>

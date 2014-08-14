@@ -1,0 +1,22 @@
+<%#
+  Available locals:
+  * content (The object the essence is linked to the element)
+  * html_options
+
+  Please consult Alchemy::Content.rb docs for further methods on the content object
+%>
+
+<%= select_tag content.form_field_name,
+    options_for_select(Menu.all.map {
+      |p| [p.name + " - " + p.restaurant.name, p.id] }, content.ingredient),
+      :id => content.form_field_id %>
+
+
+
+
+<!-- Essence editor do |e|
+e.content.ingredient.name
+e.content.ingredient.menu.restaurant... -->
+
+<!-- app/views/alchemy/essences/_essence_headline_editor.html.erb -->
+<!-- app/views/alchemy/essences/_essence_headline_editor.html.erb -->

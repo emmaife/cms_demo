@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+    mount RailsAdmin::Engine => '/dev_admin', as: 'rails_admin'
+
+      resources :restaurants
+  resources :menus
+  resources :menu_items
+  resources :menu_categories
+
+  namespace :admin do
+    resources :restaurants, :menus, :menu_categories, :menu_items
+  end
+
+  mount Alchemy::Engine => '/'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

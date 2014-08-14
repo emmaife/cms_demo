@@ -1,0 +1,34 @@
+# == This file defines the page layouts for new pages.
+#
+# For further informations please see http://guides.alchemy-cms.com/create_page_layouts.html
+
+- name: index
+  unique: true
+  elements: [left_images, center_images, right_images]
+  cache: false
+
+- name: menu_deux
+  elements: [restaurant_and_menu, menu_categories_and_items]
+
+- name: locations
+  cache: false
+
+- name: cell_test
+  cells: [menu_cell]
+  elements: [restaurant_and_menu, menu_categories_and_items]
+
+- name: location_restaurants
+  cache: false
+
+- name: restaurant_page
+  cache: false
+
+#### LAYOUT/PARTIAL PAGES ####
+
+- name: header
+  elements: [news_ticker]
+  layoutpage: true
+  cache: false
+
+- name: menu
+  elements: [menu, menu_categories_and_items]

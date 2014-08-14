@@ -26,8 +26,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 gem 'rails_admin'
+gem 'alchemy_cms', github: 'magiclabs/alchemy_cms', branch: 'master'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'alchemy-devise', '~> 2.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'

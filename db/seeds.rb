@@ -16,25 +16,25 @@ Location.create(region_id: 1, address: "Madison Square Garden", city: "New York"
 Restaurant.create(name: 'Brother Jimmies 8th Ave.')
 Restaurant.create(name: 'Brother Jimmies MSG')
 
-Menu.create(name: "Breakfast")
-Menu.create(name: "Lunch")
-Menu.create(name: "Dinner")
+# Menu.create(name: "Breakfast")
+# Menu.create(name: "Lunch")
+# Menu.create(name: "Dinner")
 
-MenuCategory.create(name: "Starters")
-MenuCategory.create(name: "Main")
-MenuCategory.create(name: "Dessert")
+# MenuCategory.create(name: "Starters")
+# MenuCategory.create(name: "Main")
+# MenuCategory.create(name: "Dessert")
 
-RestaurantMenu.create(restaurant_id: 1, menu_id: 1)
-RestaurantMenu.create(restaurant_id: 1, menu_id: 2)
-RestaurantMenu.create(restaurant_id: 2, menu_id: 1)
+# RestaurantMenu.create(restaurant_id: 1, menu_id: 1)
+# RestaurantMenu.create(restaurant_id: 1, menu_id: 2)
+# RestaurantMenu.create(restaurant_id: 2, menu_id: 1)
 
-RestaurantMenuCategory.create(restaurant_menu_id: 1, menu_category_id: 1)
-RestaurantMenuCategory.create(restaurant_menu_id: 2, menu_category_id: 2)
-RestaurantMenuCategory.create(restaurant_menu_id: 1, menu_category_id: 3)
+# RestaurantMenuCategory.create(restaurant_menu_id: 1, menu_category_id: 1)
+# RestaurantMenuCategory.create(restaurant_menu_id: 2, menu_category_id: 2)
+# RestaurantMenuCategory.create(restaurant_menu_id: 1, menu_category_id: 3)
 
-RestaurantMenuItem.create(restaurant_menu_category_id: 1, name: "Eggs")
-RestaurantMenuItem.create(restaurant_menu_category_id: 1, name: "Pancakes")
-RestaurantMenuItem.create(restaurant_menu_category_id: 2, name: "Burger")
+# RestaurantMenuItem.create(restaurant_menu_category_id: 1, name: "Eggs")
+# RestaurantMenuItem.create(restaurant_menu_category_id: 1, name: "Pancakes")
+# RestaurantMenuItem.create(restaurant_menu_category_id: 2, name: "Burger")
 
 
 
