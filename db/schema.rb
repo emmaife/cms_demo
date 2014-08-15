@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140814165409) do
+ActiveRecord::Schema.define(version: 20140815141719) do
 
   create_table "alchemy_attachments", force: true do |t|
     t.string   "name"
@@ -140,6 +140,8 @@ ActiveRecord::Schema.define(version: 20140814165409) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.text     "menu_text"
+    t.integer  "restaurant_id"
   end
 
   create_table "alchemy_essence_pictures", force: true do |t|

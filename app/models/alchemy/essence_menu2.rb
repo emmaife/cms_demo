@@ -36,15 +36,10 @@ def create_menu
   end
 
 
-
-
 #   def update_menu
 #     @menu = Menu.find_by_id(content.ingredient)
 #     @menu.update(name: self.name, restaurant_id: content.ingredient)
 #   end
-
-
-
 
 
 end

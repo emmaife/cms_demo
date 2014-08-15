@@ -31,7 +31,6 @@ after_find :delete_if_trashed
     else
       @menu_item.update(name: self.name, price: self.price, menu_category_id: @menu_category.id)
       @menu_category.update(name: content.element.contents.first.essence.body, menu_id: self.page.find_elements({:only => ["restaurant_and_menu"]}).first.essences.first.menu_id)
-
     end
     self.category_and_item_updated= true
     self.update(menu_item_id: @menu_item.id)
@@ -47,6 +46,8 @@ after_find :delete_if_trashed
 
     end
   end
+
+
 
 end
 

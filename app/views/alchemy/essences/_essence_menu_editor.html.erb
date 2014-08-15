@@ -6,10 +6,19 @@
   Please consult Alchemy::Content.rb docs for further methods on the content object
 %>
 
-<%= select_tag content.form_field_name,
-    options_for_select(Menu.all.map {
-      |p| [p.name + " - " + p.restaurant.name, p.id] }, content.ingredient),
-      :id => content.form_field_id %>
+<%= select_tag content.form_field_name(:restaurant_id),
+    options_for_select(Restaurant.all.map {
+      |p| [p.name, p.id] }, content.essence.restaurant_id),
+      :id => content.form_field_id(:restaurant_id) %>
+
+   <%= text_area_tag(
+    content.form_field_name(:menu_text),
+    content.essence.menu_text,
+    :id => content.form_field_id(:menu_text)
+  ) %>
+
+
+
 
 
 

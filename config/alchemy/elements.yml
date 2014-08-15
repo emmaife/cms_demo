@@ -41,6 +41,7 @@
       linkable: true
 
 - name: menu
+  unique: true
   contents:
   - name: menu
     hint: true

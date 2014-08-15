@@ -31,4 +31,4 @@
   cache: false
 
 - name: menu
-  elements: [menu, menu_categories_and_items]
+  elements: [menu]
