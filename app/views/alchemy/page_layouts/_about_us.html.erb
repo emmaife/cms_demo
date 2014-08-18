@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="assets/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/responsive.css" rel="stylesheet" type="text/css" />
+
+<script src="js/jquery_006.js" type="text/javascript" charset="utf-8"></script>
+
+<!--- slider banner -->
+<script type="text/javascript" src="javascripts/jquery.innerfade.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+  $('#image_rotate').innerfade({ 
+    speed: 'slow', 
+    timeout: 4000, 
+    type: 'sequence', 
+    containerheight: '367px'
+  });
+});
+</script>
+
+<!-- TOP MENU -->
+<script type="text/javascript" src="javascripts/modernizr-2.0.6.min.js"></script>
+
+<script type="text/javascript"  src="javascripts/tinynav.min.js"></script>
+<script type="text/javascript">
+  // TinyNav.js
+  $(function () {
+    $('.navigation').tinyNav();
+  });
+</script>
+
+<!--- NEWS TICKER --->
+<link rel="stylesheet" href="css/newsticker.css" type="text/css">
+</head><body>
+
+
+    <div class="page-title">
+        ABOUT US
+    </div>
+    <div class="details_holder">
+      <div class="innerpage_banner">
+          <div class="banner_holder">
+          <%=  render_elements only: 'about_us_images' %>
+            </div>
+             <div class="common_text">  
+        <%= render_elements only: 'about_us_text' %>      
+        </div>
+        </div>
+        <div class="make_reservation">
+          <div class="form_holder">
+              <div class="title"><strong>Make a Reservation</strong><br />Powered By OpenTable</div>
+                <div class="textbox ico1"><select name=""><option>00/00/0000</option></select></div>
+                <div class="textbox ico2"><select name=""><option>7:00 PM</option></select></div>
+                <div class="textbox ico3"><select name=""><option>2 People</option></select></div>
+                <div class="btn_holder"><input name="" type="submit" value="Find a Table" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> <strong>Cock &amp; Bull  &bull;  BEST BRITISH PUB NYC  &bull;  23 West 45th Street  &bull;  New York, NY 10036  &bull;  Get Map<br />Tel: 212.819.1900</strong><br /><br />&copy; 2013 Cock &amp; Bull  &bull;  Website Design By <a href="http://orphmedia.com/">Orphmedia</a></div>
+</div>
+</body></html>

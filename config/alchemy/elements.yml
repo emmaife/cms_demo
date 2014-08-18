@@ -2,21 +2,6 @@
 #
 # For further informations please see http://guides.alchemy-cms.com/create_elements.html
 
-- name: article
-  hint: true
-  unique: true
-  contents:
-  - name: headline
-    type: EssenceText
-    default: :article_headline
-    hint: true
-  - name: picture
-    type: EssencePicture
-    hint: true
-  - name: text
-    type: EssenceRichtext
-    default: :article_text
-    hint: true
 
 - name: restaurant_and_menu
   unique: true
@@ -24,7 +9,7 @@
   - name: menu_name
     type: EssenceMenu2
 
-- name: left_images
+- name: image_slide
   picture_gallery: true
 
 - name: center_images
@@ -34,7 +19,7 @@
   picture_gallery: true
 
 - name: news_ticker
-  contents:
+  available_contents:
   - name: news_ticker_link
     type: EssenceText
     settings:
@@ -47,6 +32,12 @@
     hint: true
     type: EssenceMenu
 
+- name: menu_about
+  unique: true
+  contents:
+  - name: menu_about_text
+    type: EssenceRichtext
+
 
 - name: menu_categories_and_items
   contents: 
@@ -56,7 +47,10 @@
   - name: menu_item
     type: EssenceMenuItem
 
-
+- name: restaurant_info
+  contents:
+  - name: restaurant_name
+    type: EssenceRestaurant
 
 - name: heading
   contents:
@@ -64,3 +58,20 @@
     type: EssenceText
 
 
+- name: menu_index_pictures
+  picture_gallery: true
+
+- name: about_us_text
+  contents:
+  - name: text
+    type: EssenceRichtext
+
+- name: about_us_images
+  picture_gallery: true
+
+- name: link
+  contents:
+  - name: link
+    type: EssenceText
+    settings:
+      linkable: true

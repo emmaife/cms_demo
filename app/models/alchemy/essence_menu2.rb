@@ -29,7 +29,7 @@ def create_menu
   end
 
   def delete_menu_if_trashed
-    @menu = Menu.find_by_id(self.menu_id)
+    @menu = Menu.find_by(self.menu_id)
     if self.content.element.trashed? && !@menu.nil? 
         @menu.destroy
     end

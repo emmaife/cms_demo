@@ -1,0 +1,26 @@
+<%# The content object holds the essence %>
+<% if content.ingredient.nil?%>
+""
+<%else%>
+
+<%restaurant = Restaurant.find(content.ingredient) %>
+
+<div class="contact_text">
+
+<strong><%= restaurant.name%></strong><br />
+<%= restaurant.address%><br />
+<%= restaurant.city%> <%=restaurant.state%><br />
+Telephone: <%= restaurant.phone %><br /><br />
+
+<span>
+<strong>Hours:</strong><br />
+<%restaurant.hours.each_line do |line| %>
+<p><%=line%></p>
+<%end%>
+</span>
+<%end%>
+<!-- <h2> Menus</h2> -->
+<%# restaurant.menus.each do |menu| %>
+<!-- <a href = <%#= '/locations/' + restaurant.name.split(' ').join('_').gsub(/\W/, "").downcase + '/' + menu.name.downcase%>><%#=menu.name%></a></br> -->
+<%#end%>
+

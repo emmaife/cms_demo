@@ -1,0 +1,98 @@
+@media screen and (max-width:320px), (max-width:550px), (max-width:600px), (max-width:650px), (max-width:700px), (max-width:900px), (max-width:960px){
+select {-webkit-appearance:none;}
+.tinynav {display:block;border:1px solid #a6a6a6; width:100%; -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; margin-bottom:10px; font-size:17px;font-family:'latobold'; color:#3d3d3d; padding:10px; background:url(../images/arrow1.png) no-repeat 98% 17px #fff; font-family:Arial, Helvetica, sans-serif;}
+.navigation {display:none;}
+}
+
+/*** for tablets/samsung***/
+@media only screen and (max-width:500px),(max-width:550px), (max-width:600px), {
+img{width:100%; display:block;}
+.details_holder{ width:96%; float:left; padding:0 2%}
+
+/*** HEADER ****/
+.header{ width:100%; height:auto;}
+.logo{ width:100%;padding:5px 0 0 0; height:auto;}
+.logo img{width:300px; margin:0 auto;}
+.header_content{ width:90%; float:left; padding:10px 5% 25px 5%;}
+.social_icon{width:100%; float:left; text-align:right;}
+.social_icon img{margin:10px 0 0 5px; width:20px; float:left;}
+
+/*** MAIN BANNER ***/
+.main_banner_content img{width:100%;}
+.center_img{width:33%; float:left; padding:10px 0}
+.main_banner_imags{width:33% !important; padding:10px 0;}
+
+/*** MAKE RESERVATION ***/
+.make_reservation{padding:10px 2%;}
+.make_reservation .form_holder .title{ width:100%; border-right:0px solid #000; border-bottom:1px solid #000;}
+.make_reservation .form_holder .textbox{width:50% !important; float:left; border-right:1px solid #000;}
+.make_reservation .form_holder .btn_holder{ width:40%; float:left; padding:8px 0 0 0; text-align:center;}
+
+.banner_holder{width:100% !important; padding:10px 0 !important;}
+.banner_holder img{width:95% !important;}
+.common_text{ width:90% !important; padding:20px 5% !important; margin-top:0 !important}
+.contact_text{ width:90% !important; padding:20px 5% !important; margin-top:0 !important}
+.other_content{ width:90% !important; padding:20px 5% !important; margin-top:0 !important}
+
+}
+
+/*** for ipad tablts***/
+@media only screen and  (max-width:650px), (max-width:700px), (max-width:760px), (max-width:960px), (max-width:100%) {
+img{width:100%; display:block;}
+.details_holder{ width:96%; float:left; padding:0 2%}
+
+/*** HEADER ****/
+.header{ width:100%; height:auto;}
+.logo{ width:100%;padding:5px 0 0 0; height:auto;}
+.logo img{width:300px; margin:0 auto;}
+.header_content{ width:90%; float:left; padding:10px 5% 25px 5%;}
+.social_icon{width:100%; float:left; text-align:right;}
+.social_icon img{margin:10px 0 0 5px; width:20px; float:left;}
+
+/*** MAIN BANNER ***/
+.main_banner_content img{width:100%;}
+.center_img{width:33%; float:left; padding:10px 0}
+.main_banner_imags{width:33% !important; padding:10px 0;}
+
+/*** MAKE RESERVATION ***/
+.make_reservation{padding:10px 2%;}
+.make_reservation .form_holder .title{ width:100%; border-right:0px solid #000; border-bottom:1px solid #000;}
+.make_reservation .form_holder .textbox{width:50% !important; float:left; border-right:1px solid #000;}
+.make_reservation .form_holder .btn_holder{ width:40%; float:left; padding:8px 0 0 0; text-align:center;}
+
+/*** INNER PAGE COMMON ***/
+.banner_holder{width:40%; padding:10px 0;}
+.banner_holder img{width:95%;}
+.common_text{ width:56%; padding:20px 2%; margin-top:0}
+.contact_text{ width:56%; padding:20px 2%; margin-top:0}
+.other_content{ width:56%; padding:20px 2%; margin-top:0}
+}
+
+/*** FOR MOBILE BROWERS ***/
+@media only screen and (max-width:300px), (max-width:320px),(max-width:400px), (max-width:450px){
+img{width:100%; display:block;}
+.logo img{width:100%; margin:0 auto;}
+
+/*** MAIN BANNER ***/
+.main_banner_content img{width:300px; margin:0 auto;}
+.center_img{width:100%; float:left;}
+.main_banner_imags{width:100%; padding:10px 0;}
+.main_banner_imags ul li{width:100%; float:left; height:363px;}
+
+/*** MAKE RESERVATION ***/
+.make_reservation .form_holder .title{text-align:center;}
+.make_reservation .form_holder .textbox{width:85% !important; border-right:0px solid #000; padding:5px 0; border-bottom:1px solid #000;}
+.make_reservation .form_holder .textbox select {border:1px solid #3b1c00; padding:2px 2px; font-size:12px; color:#333;width:auto; width:90%; -moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;background:url(../images/arrow1.png) no-repeat 95% 5px #fff;}
+.make_reservation .form_holder .btn_holder{ width:100%; padding:8px 0}
+
+/*** INNER PAGE COMMON ***/
+.banner_holder{width:100%; padding:10px 0;}
+.banner_holder img{width:95%; margin:0 auto;}
+.common_text{ width:90%; padding:20px 5%; margin-top:-100px !important;}
+
+.contact_text{ width:90%; padding:20px 5%; margin-top:-100px !important;}
+.other_content{ width:90%; padding:20px 5%; margin-top:-100px !important;}
+
+
+
+}

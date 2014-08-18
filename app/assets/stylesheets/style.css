@@ -1,0 +1,72 @@
+body{margin:0; padding:0; background:url(../assets/bg.jpg); font-family:"Times New Roman", Times, serif; font-size:12px; color:#fff;}
+
+/*** COMMON CSS ***/
+#main{margin:0 auto; width:100%; height:auto; float:left;background:url(../assets/flag.png) repeat-y center 0;}
+img{border:0;}
+ul, h1, h2, h3, h4, h5{margin:0; padding:0; line-height:normal; width:100%;}
+ul li{list-style:none; float:left;}
+
+.details_holder{ width:900px; margin:0 auto;}
+
+/*** HEADER ****/
+.header{ width:100%; height:185px; float:left; background:url(../assets/header.png) repeat-x center bottom; text-align:center;}
+.logo{ width:96%; float:left; padding:5px 0 0 4%; height:120px;}
+.header_content{ width:90%; float:left; padding:20px 5% 0 5%;}
+.tinynav{display:none;}
+.navigation{ width:90%; float:left; text-align:center; text-transform:uppercase; font-weight:bold; font-size:11px; font-family:Georgia, "Times New Roman", Times, serif;}
+.navigation a{color:#ffd4b7; text-decoration:none; margin:0 10px;}
+.navigation a:hover{color:#c90a03;}
+.navigation .current{color:#c90a03;}
+.social_icon{width:10%; float:left; text-align:right;}
+.social_icon img{margin:0 0 0 5px;}
+
+/*** FOOTER ****/
+.footer{ width:100%; float:left; background:url(../assets/bottom-bar.png) no-repeat center 0; padding:70px 0 10px 0; text-align:center; color:#000;}
+.footer a{color:#000; text-decoration:none; margin:0 5px;}
+.footer a:hover{color:#c90a03;}
+
+/*** MAIN BANNER ***/
+.main_banner_content{width:100%; float:left; margin:5px 0; background:url(../assets/line1.jpg) repeat-x center 0; padding:3px 0;}
+.center_img{width:300px; float:left;}
+.main_banner_imags{width:300px; float:left;}
+.main_banner_imags ul li{width:100%; float:left; height:363px;}
+
+/*** MAKE RESERVATION ***/
+.make_reservation{width:96%; float:left; background:#000; padding:5px 2%; margin-bottom:4px; font-family:Arial, Helvetica, sans-serif; color:#333;}
+.make_reservation .form_holder{width:96%; padding:0 2%; float:left; background:#f6f6f3; border:1px solid #7c7872; -moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;}
+.make_reservation .form_holder .title{ width:184px; float:left; border-right:1px solid #000; padding:5px 0; font-size:10px; text-transform:uppercase; font-size:9px; letter-spacing:0.5px;}
+.make_reservation .form_holder .title strong{font-size:13px; text-transform:capitalize; font-weight:normal; letter-spacing:1px;}
+.make_reservation .form_holder .textbox{width:164px; float:left; border-right:1px solid #000;}
+.make_reservation .form_holder .textbox select{border:1px solid #3b1c00; padding:2px 2px; font-size:12px; color:#333;width:auto; width:90%; -moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.make_reservation .form_holder .textbox.ico1{background:url(../assets/ico-calendar.jpg) no-repeat 10px 8px; padding:7px 0 7px 40px; width:124px;}
+.make_reservation .form_holder .textbox.ico2{background:url(../assets/ico-time.jpg) no-repeat 10px 8px; padding:7px 0 7px 40px; width:124px;}
+.make_reservation .form_holder .textbox.ico3{background:url(../assets/ico-people.jpg) no-repeat 10px 8px; padding:7px 0 7px 40px; width:124px;}
+.make_reservation .form_holder .btn_holder{ width:135px; float:left; padding:8px 0 0 10px;}
+.make_reservation .form_holder .btn_holder input{border:0; background:url(../assets/button-red.png) no-repeat 0 0; width:135px; height:23px; text-align:center; color:#fff; font-size:12px; font-weight:bold; text-shadow:1px 1px 1px #000; cursor:pointer; /*padding:0 0 8px 0; */}
+.make_reservation .form_holder .btn_holder input:hover{background:url(../assets/button-red.png) no-repeat 0 -46px; color:#ff0000}
+
+/*** INNER PAGE COMMON ***/
+.innerpage_banner{width:100%; float:left; margin:5px 0; border-bottom:3px solid #c8c8c8;border-top:3px solid #c8c8c8;background:#5d595a;}
+.banner_holder{width:460px; float:left;}
+.banner_holder ul li{width:100%; float:left; height:367px;}
+.common_text{ width:400px; float:left; padding:20px; line-height:20px;}
+.common_text a{color:#add8e6; text-decoration:none;}
+.common_text a:hover{color:#ff0000;}
+
+/*** SIGNUP FORM ***/
+.signup_text{width:100%; float:left; padding:0 0 10px 0;}
+.signup_form{width:100%; float:left;}
+.signup_form .text_holder{width:25%; float:left; height:35px;}
+.signup_form .textbox{width:75%; float:left; height:35px;}
+.signup_form .textbox input{border:0; background:#fff; padding:5px; font-size:13px; color:#666; width:80%}
+.signup_form .textbox input.btn_style{border:0; background:#a80f00; padding:5px 15px; font-size:13px; color:#fff; cursor:pointer; font-weight:bold; text-shadow:1px 1px 1px #000; width:auto;}
+
+.contact_text{ width:400px; float:left; padding:20px; line-height:normal; text-align:center;}
+.contact_text a{color:#add8e6; text-decoration:none; text-transform:uppercase;}
+.contact_text a:hover{color:#ff0000;}
+.contact_text span{color:#f4cca3; text-transform:uppercase}
+
+.other_content{ width:400px; float:left; padding:20px 20px 0 20px; line-height:20px; height:347px; /*overflow-x:hidden; overflow-y:scroll*/}
+.other_content a{color:#add8e6; text-decoration:none; text-transform:uppercase; font-weight:bold; line-height:25px;}
+.other_content a:hover{color:#ff0000;}
+.other_content span{color:#f4cca3; text-transform:uppercase}

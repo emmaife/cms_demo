@@ -38,12 +38,11 @@ after_find :delete_if_trashed
 
   def delete_if_trashed
     @menu_category = MenuCategory.find_by(id: self.menu_category_id)
-    if @menu_category.nil?
-      @menu_category = MenuCategory.where(name: content.element.contents.first.essence.body, menu_id: self.page.find_elements({:only => ["restaurant_and_menu"]}).first.essences.first.menu_id).first_or_create
-    end    
-    if self.content.element.trashed? && !@menu_category.nil? 
-        @menu_category.destroy!
-
+    # if @menu_category.nil?
+    #   @menu_category = MenuCategory.where(name: content.element.contents.first.essence.body, menu_id: self.page.find_elements({:only => ["restaurant_and_menu"]}).first.essences.first.menu_id).first_or_create
+    # end    
+    if self.content.element.trashed? && !@menu_category.nil?
+        @menu_category.destroy
     end
   end
 

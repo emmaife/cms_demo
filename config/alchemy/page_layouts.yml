@@ -4,7 +4,7 @@
 
 - name: index
   unique: true
-  elements: [left_images, center_images, right_images]
+  elements: [image_slide, center_images, right_images, news_ticker]
   cache: false
 
 - name: menu_deux
@@ -22,6 +22,7 @@
 
 - name: restaurant_page
   cache: false
+  elements: [restaurant_info]
 
 #### LAYOUT/PARTIAL PAGES ####
 
@@ -30,5 +31,23 @@
   layoutpage: true
   cache: false
 
+- name: menus_index
+  elements: [menu_about, image_slide]
+
 - name: menu
   elements: [menu]
+
+- name: about_us
+  elements: [about_us_text, about_us_images]
+
+- name: sign_up
+  elements: [image_slide]
+
+- name: gift_cards
+  elements: [image_slide]
+
+- name: contact
+  elements: [image_slide, restaurant_info]
+
+- name: look_whos_talking
+  elements: [image_slide, link]

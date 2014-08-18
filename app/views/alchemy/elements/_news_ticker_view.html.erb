@@ -1,5 +1,22 @@
-<%- cache(element) do -%>
-  <%= element_view_for(element) do |el| -%>
-    <%= el.render :news_ticker_link %>
-  <%- end -%>
-<%- end -%>
+
+
+
+
+<div class="page-title">
+        <div class="news-ticker" id="news_ticker_1">
+            <div style="opacity: 0.3; display: block;" class="news-ticker-btn news-ticker-prev"></div>
+            <div class="news-ticker-items-wrapper">   
+                <ul style="width: 2372px; padding: 0px;" class="news-ticker-items">
+                         <%- element.contents.where(name: ['news_ticker_link']).each do |content| -%>
+
+
+                    <li style="display: list-item; margin-left: -250px;"><%= render_essence_view(content) %></li>
+          
+  <%end%>
+                </ul>   
+            </div>
+            <div style="opacity: 0.3; display: block;" class="news-ticker-btn news-ticker-next"></div>  
+        </div>
+    </div>
+
+

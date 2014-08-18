@@ -1,0 +1,10 @@
+<%- cache(element) do -%>
+  <%= element_view_for(element) do |el| -%>
+      <ul id="image_rotate">
+       <%- element.contents.gallery_pictures.each do |image| -%>
+      <li>  <%= render_essence_view(image) %></li>
+    
+      <%- end -%>
+    </ul>
+  <%- end -%>
+<%- end -%>

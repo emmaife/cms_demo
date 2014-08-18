@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140815141719) do
+ActiveRecord::Schema.define(version: 20140818175932) do
 
   create_table "alchemy_attachments", force: true do |t|
     t.string   "name"
@@ -161,6 +161,12 @@ ActiveRecord::Schema.define(version: 20140815141719) do
     t.string   "crop_from"
     t.string   "crop_size"
     t.string   "render_size"
+  end
+
+  create_table "alchemy_essence_restaurants", force: true do |t|
+    t.integer  "restaurant_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "alchemy_essence_richtexts", force: true do |t|
@@ -396,6 +402,11 @@ ActiveRecord::Schema.define(version: 20140815141719) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "phone"
+    t.text     "hours"
   end
 
   create_table "taggings", force: true do |t|

@@ -10,7 +10,7 @@
   <h3><%= c.name %></h3>
 
   <% c.menu_items.each do |i| %>
-<%= i.name %></br>
+<%= i.name %> - $<%=i.price.to_i%></br>
   <%end%>
   <%end%>
   <%end%>

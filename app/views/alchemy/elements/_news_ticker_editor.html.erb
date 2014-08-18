@@ -1,3 +1,8 @@
+
+
 <%= element_editor_for(element) do |el| -%>
-  <%= el.edit :news_ticker_link %>
+  <% element.contents.where(name: ['news_ticker_link']).each do |content| %>
+    <%= render_essence_editor content %>
+  <% end %>
+  <p><%= render_new_content_link(element) %></p>
 <%- end -%>

@@ -1,14 +1,201 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <%= render_meta_data %>
+   <%= render_meta_data %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BEST BRITISH PUB | MIDTOWN GASTROPUB |COCK & BULL NYC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/assets/style.css" rel="stylesheet" type="text/css" />
+<link href="/assets/responsive.css" rel="stylesheet" type="text/css" />
+
+<script src="/javascripts/jquery_006.js" type="text/javascript" charset="utf-8"></script>
+
+<!--- slider banner -->
+<script type="text/javascript" src="/assets/jquery.innerfade.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+  $('#image_rotate').innerfade({ 
+    speed: 'slow', 
+    timeout: 4000, 
+    type: 'sequence', 
+    containerheight: '363px'
+  });
+  $('#image_rotate_new').innerfade({ 
+    speed: 'slow', 
+    timeout: 3500, 
+    type: 'sequence', 
+    containerheight: '363px'
+  });
+});
+</script>
+
+<!-- TOP MENU -->
+<script type="text/javascript" src="/assets/modernizr-2.0.6.min.js"></script>
+
+<script type="text/javascript"  src="/assets/tinynav.min.js"></script>
+<script type="text/javascript">
+  // TinyNav.js
+  $(function () {
+    $('.navigation').tinyNav();
+  });
+</script>
+
+<!--- NEWS TICKER --->
+<link rel="stylesheet" href="/assets/newsticker.css" type="text/css">
+<script type="text/javascript">
+var news_ticker_1_animation_active = false;   
+var news_ticker_1_timer;    
+function news_ticker_1_animation()
+{
+  if( news_ticker_1_animation_active )
+  {
+    var $ul = $(".news-ticker-items", $("#news_ticker_1"));
+    var $li = $("li:first", $ul);
+    var w = $li.outerWidth();
+    var ml = parseInt( $li.css("margin-left") );
+    if( 0 == w + ml )
+    {
+      $li.detach().appendTo($ul).css("margin-left", 0);
+    }
+    else
+    {
+      $li.css("margin-left", ml - 1);
+    }
+
+    setTimeout(function(){
+          news_ticker_1_animation();
+      }, 20 );
+  }
+}
+function news_ticker_1_prev()
+{
+  clearTimeout(news_ticker_1_timer);    
+  var $ul = $(".news-ticker-items", $("#news_ticker_1"));
+  var $li = $("li:first", $ul);
+  var $last = $("li:last", $ul);  
+  var w = $li.outerWidth();
+  var ml = parseInt( $li.css("margin-left") );
+    
+  if( ml != 0 )
+  {
+    $li.animate({marginLeft: 0}, 200);  
+  }
+  else
+  {
+    $last.detach().prependTo($ul).css("margin-left", -w);
+    $last.animate({marginLeft: 0}, 200);
+  }   
+}     
+function news_ticker_1_next()
+{
+  clearTimeout(news_ticker_1_timer);    
+  var $ul = $(".news-ticker-items", $("#news_ticker_1"));
+  var $li = $("li:first", $ul);
+  var $last = $("li:last", $ul);  
+  var w = $li.outerWidth();
+  var ml = parseInt( $li.css("margin-left") );
+    
+  $li.animate({marginLeft: -w}, 200, function(){
+    $li.detach().appendTo($ul).css("margin-left", 0); 
+  });     
+  
+}   
+function news_ticker_1_start()
+{
+  clearTimeout(news_ticker_1_timer);  
+  news_ticker_1_animation_active = true;
+  news_ticker_1_animation();
+}
+    
+function news_ticker_1_stop()
+{
+  clearTimeout(news_ticker_1_timer);
+  news_ticker_1_animation_active = false;
+}   
+    
+function news_ticker_1_init()
+{
+  var w = 0;  
+  $("#news_ticker_1 .news-ticker-items").children("li").each(function(i, e){
+    
+    w = w + $(e).outerWidth();
+  });
+  //w = w * 2;  
+  $("#news_ticker_1 .news-ticker-items").css({width: w, padding: 0}); 
+  $("#news_ticker_1 .news-ticker-items li").show();
+}   
+
+$(document).ready(function(){
+  news_ticker_1_init();
+  news_ticker_1_start();
+    
+  $(".news-ticker-btn")
+  .css({opacity: 0.3})
+  .show()
+  .hover(
+    function(){
+      $(this).css({opacity: 0.7});
+    },
+    function(){
+      $(this).css({opacity: 0.3});
+    }
+  )
+  .click(function(){
+    if( $(this).hasClass("news-ticker-prev") )
+    {
+      news_ticker_1_prev();
+    }
+    else
+    {
+      news_ticker_1_next()
+    }
+  }); 
+    
+  $("#news_ticker_1").hover(
+    function(){
+      news_ticker_1_stop();
+    },
+    function(){
+      clearTimeout(news_ticker_1_timer);
+      news_ticker_1_timer = setTimeout(function(){news_ticker_1_start();}, 500 );
+    }
+  );  
+});
+</script>
+
+
 </head>
 <body>
-  <%= yield %>
+
+<div id="main">
+  <div class="header">
+      <div class="details_holder">
+            <div class="logo"><a href="#"><img src="/assets/logo.png" alt="" /></a></div>
+            <div class="header_content">
+                <div class="navigation">
+                    <a href="/menus.html">Menu</a>
+                    <a href="/about-us.html">About Us</a>
+                    <a href="/signup.html">Sign Up</a>
+                    <a href="/giftcards.html">Gift Cards</a>
+                    <a href="/contact.html">Contact</a>
+                    <a href="/testimonials.html">Look Who's Talking</a>
+                </div>
+                <div class="social_icon">
+                    <a href="/menus.html"><img src="/assets/ico1.jpg" alt="" /></a> 
+                    <a href="https://www.facebook.com/pages/Cock-and-Bull-NYC/152672991470088" target="_blank"><img src="/assets/ico2.png" alt="" /></a> 
+                    <a href="http://twitter.com/cockandbullnyc" target="_blank"><img src="assets/ico3.png" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br clear="all" />
+
+     <%= yield %>
   <%= alchemy_preview_mode_code %>
   <%= render "alchemy/menubar" %>
-</body>
-</html>
+    </body>
+    </html>

@@ -1,1 +1,28 @@
-<%= render_elements %>
+    <%= render_elements only: 'news_ticker' %>
+
+    <div class="details_holder">
+      <div class="main_banner_content">
+         <div class="main_banner_imags">
+
+    <%= render_elements only: 'image_slide' %>
+  </div>
+
+          <div class="center_img">
+    <%= render_elements only: 'center_images' %>
+            </div>
+          <div class="main_banner_imags">
+    <%= render_elements only: 'right_images' %>
+            </div>
+        </div>
+        <div class="make_reservation">
+          <div class="form_holder">
+              <div class="title"><strong>Make a Reservation</strong><br />Powered By OpenTable</div>
+                <div class="textbox ico1"><select name=""><option>00/00/0000</option></select></div>
+                <div class="textbox ico2"><select name=""><option>7:00 PM</option></select></div>
+                <div class="textbox ico3"><select name=""><option>2 People</option></select></div>
+                <div class="btn_holder"><input name="" type="submit" value="Find a Table" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> <strong>Cock &amp; Bull  &bull;  BEST BRITISH PUB NYC  &bull;  23 West 45th Street  &bull;  New York, NY 10036  &bull;  Get Map<br />Tel: 212.819.1900</strong><br /><br />&copy; 2013 Cock &amp; Bull  &bull;  Website Design By <a href="http://orphmedia.com/">Orphmedia</a></div>
+</div>

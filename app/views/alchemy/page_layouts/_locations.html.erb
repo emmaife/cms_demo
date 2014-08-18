@@ -2,7 +2,8 @@
 <% Region.all.each do |r|%>
   <h2><%= r.name%></h2>
   <%r.locations.each do |l| %>
-  <a href = <%='/locations/' + l.business.name.split(' ').join('_').gsub(/\W/, "")%>><h3><%=l.business.name%></h3></a>
+  <a href = <%='/locations/' + l.business.name.split(' ').join('_').gsub(/\W/, "").downcase%>><h3><%=l.business.name%></h3></a>
   <%= l.address %>
   <%end%>
   <%end%>
+  

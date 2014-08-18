@@ -1,11 +1,13 @@
+
+
+
 <%- cache(element) do -%>
   <%= element_view_for(element) do |el| -%>
-    <div class="center_images_images">
-      <%- element.contents.gallery_pictures.each do |image| -%>
-      <div class="center_images_image <%= image.essence.css_class %>">
-        <%= render_essence_view(image, image_size: '160x120') %>
-      </div>
+      <ul id="image_rotate">
+       <%- element.contents.gallery_pictures.each do |image| -%>
+      <li>  <%= render_essence_view(image) %></li>
+    
       <%- end -%>
-    </div>
+    </ul>
   <%- end -%>
 <%- end -%>
