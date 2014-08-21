@@ -5,24 +5,20 @@ module Admin
     def new
       @restaurant = Restaurant.new
     end
-  
   end
-
 
 
   class MenusController < Alchemy::Admin::ResourcesController
             # before_action :set_menu, only: [:show, :edit, :update, :destroy]
-
     def new
       @menu = Menu.new
       @restaurants = Restaurant.all
       @menus = Alchemy::EssenceMenu.all
-
     end
+
     def edit
       @restaurants = Restaurant.all
     end
-
   end
 
   class MenuItemsController < Alchemy::Admin::ResourcesController
@@ -30,12 +26,14 @@ module Admin
       @menu_item = MenuItem.new
       @menu_categories = MenuCategory.all
     end
+
     def edit
       @menu_categories = MenuCategory.all
     end
   end
 
-    class MenuCategoriesController < Alchemy::Admin::ResourcesController
+
+  class MenuCategoriesController < Alchemy::Admin::ResourcesController
 
       def new
         @menu_category = MenuCategory.new
@@ -47,11 +45,10 @@ module Admin
       end
   end
 
-class NewslettersController < Alchemy::Admin::ResourcesController
-  def new 
-    @newsletter = Newsletter.new
+  class NewslettersController < Alchemy::Admin::ResourcesController
+    def new 
+      @newsletter = Newsletter.new
+    end
   end
-  
-end
 
 end

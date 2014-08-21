@@ -1,8 +1,8 @@
 class Alchemy::EssenceMenu < ActiveRecord::Base
   belongs_to :menu
   belongs_to :restaurant
-  acts_as_essence(ingredient_column: 'menu_id',
-   
+  acts_as_essence(ingredient_column: 'menu_id', #associates Alchemy Essence with Active Record Menu object
+  
     # Your options:
     #
     # ingredient_column:   [String or Symbol] - Specifies the column name you use for storing the content in the database. (Default :body)
@@ -14,31 +14,32 @@ class Alchemy::EssenceMenu < ActiveRecord::Base
   after_update :parse_menu_text, unless: :menu_parsed
   before_destroy :delete_menu
 
-# parse_menu_text is called after essence menu is updated and creates menu, menu category, and menu items, and then updates self with menu_id. checks first line which = menu title (ie dinner, lunch) 
-# then checks for colon which indicates menu category. and checks for dash which indicates menu item (before dash) and menu price (after dash)
-# creates an array of each 
+
   def parse_menu_text
+    # parse_menu_text is called after essence menu is updated and creates menu, menu category, 
+    # and menu items
     @menu = Menu.find_by(id: self.menu_id)
       if !@menu.nil? 
-        @menu.destroy
+        @menu.destroy  # overwrite menu each time parse_menu_text is called on existing essencemenu/menu pair
       end
     menu_arr = self.menu_text.split(/\n/)
     menu_arr.each do |item|
         if item == menu_arr[0]
+          # checks first line and sets it equal to menu title (ie dinner, lunch) 
           @menu = Menu.create(name: item, restaurant_id: content.essence.restaurant_id, order: Menu.last.nil? ? 1 : Menu.last.order + 1)
-        elsif item.include?(':') 
+        elsif item.include?(':') # then checks for colon which indicates menu category.
           @menu_category =  MenuCategory.create(name: item.split(":").first, menu_id: @menu.id)
-        elsif item.include?('-')
+        elsif item.include?('-') #checks for dash which indicates menu item (before dash) and menu price (after dash)
           menu_item_and_price = item.split('-')
           @menu_items = MenuItem.create(name: menu_item_and_price[0], price: menu_item_and_price[1], menu_category_id: MenuCategory.last.id) 
         end
       end
-      self.menu_parsed = true
-      self.update(menu_id: @menu.id)
+      self.menu_parsed = true #sets menu_parsed to true so that parse_menu_text method isn't called after the self.update below
+      self.update(menu_id: @menu.id) #  updates self.menu_id with the id of created menu.
   end
 
-# is called after essence menu is destroyed. deletes associated menu.
   def delete_menu
+  # is called after essence menu is destroyed. deletes associated menu.
     @menu = Menu.find_by(self.menu_id)
       if !@menu.nil?
         @menu.destroy

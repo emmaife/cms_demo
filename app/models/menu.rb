@@ -18,6 +18,7 @@ class Menu < ActiveRecord::Base
   #   end
 
   def delete_essence_menu_if_trashed
+    #deletes  essence menu if the element containing the essence has been trashed in the cms
       Alchemy::EssenceMenu2.all.each do |e|
         if e.element.trashed? == true
           e.destroy

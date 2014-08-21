@@ -2,7 +2,7 @@ class Alchemy::EssenceMenuItem < ActiveRecord::Base
   belongs_to :menu_item
   belongs_to :menu_category
   belongs_to :essence_menu2
-  acts_as_essence(ingredient_column: 'menu_item_id'
+  acts_as_essence(ingredient_column: 'menu_item_id'  #associates Alchemy Essence with Active Record Menu Item object
     # Your options:
     #
     # ingredient_column:   [String or Symbol] - Specifies the column name you use for storing the content in the database. (Default :body)

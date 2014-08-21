@@ -1,6 +1,6 @@
 class Alchemy::EssenceRestaurant < ActiveRecord::Base
   belongs_to :restaurant
-  acts_as_essence(ingredient_column: 'restaurant_id'
+  acts_as_essence(ingredient_column: 'restaurant_id'  #associates Alchemy Essence with Active Record Restaurant object
     # Your options:
     #
     # ingredient_column:   [String or Symbol] - Specifies the column name you use for storing the content in the database. (Default :body)

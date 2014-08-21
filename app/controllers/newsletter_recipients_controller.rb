@@ -4,7 +4,6 @@ class NewsletterRecipientsController < ApplicationController
     @newsletter_recipient = NewsletterRecipient.new
   end
 
-
   def create
   @newsletter_recipient = NewsletterRecipient.create(newsletter_recipient_params)
      respond_to do |format|
@@ -18,6 +17,10 @@ class NewsletterRecipientsController < ApplicationController
   end
 
   private
+
+  def set_newsletter_recipient
+    @newsletter_recipient = NewsletterRecipient.find(params[:id])
+  end
 
 
   def newsletter_recipient_params

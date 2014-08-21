@@ -1,2 +1,0 @@
-- name: menu_cell
-  elements: [restaurant_and_menu, menu_categories_and_items]

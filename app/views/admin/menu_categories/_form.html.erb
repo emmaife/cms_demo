@@ -1,18 +1,11 @@
-
-
 <%= alchemy_form_for resource_instance_variable, url: resource_path(resource_instance_variable) do |f| %>
   <% resource_handler.attributes.each do |attribute| %>
     <% if attribute[:name] == "menu_id" %>
         <%=f.label "Menu"%><%= f.collection_select :menu_id, @menus.order('name'), :id, :name_with_restaurant  %></br>
-
-
-
     <% else %>
       <%= f.input  attribute[:name], resource_attribute_field_options(attribute) %>
     <% end %>
   <% end %>
-  
-
   <%= f.submit _t(:save) %>
 <% end %>
 

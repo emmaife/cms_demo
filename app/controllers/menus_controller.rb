@@ -1,7 +1,8 @@
 class MenusController < ApplicationController
   before_action :set_menu, only: [:show]
-
+  
 def index
+  # sorts menus according to the number in the order column
   @menus = Menu.all.sort {|a, b| a.order <=> b.order}
 end
 

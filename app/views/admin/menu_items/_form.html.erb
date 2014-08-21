@@ -2,13 +2,10 @@
   <% resource_handler.attributes.each do |attribute| %>
     <% if attribute[:name] == "menu_category_id" %>
         <%=f.label "Menu Category"%><%= f.collection_select :menu_category_id, @menu_categories, :id, :name_with_details%></br>
-
     <% else %>
       <%= f.input attribute[:name], resource_attribute_field_options(attribute) %>
     <% end %>
   <% end %>
-  
-
   <%= f.submit _t(:save) %>
 <% end %>
 
