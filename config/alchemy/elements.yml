@@ -2,9 +2,9 @@
 #
 # For further informations please see http://guides.alchemy-cms.com/create_elements.html
 
-
 - name: restaurant_and_menu
   unique: true
+  hint: true
   contents:
   - name: menu_name
     type: EssenceMenu2
@@ -27,9 +27,9 @@
 
 - name: menu
   unique: true
+  hint: true
   contents:
   - name: menu
-    hint: true
     type: EssenceMenu
 
 - name: menu_about

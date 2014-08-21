@@ -1,6 +1,7 @@
 class Alchemy::EssenceMenuItem < ActiveRecord::Base
   belongs_to :menu_item
   belongs_to :menu_category
+  belongs_to :essence_menu2
   acts_as_essence(ingredient_column: 'menu_item_id'
     # Your options:
     #
@@ -33,7 +34,7 @@ after_find :delete_if_trashed
       @menu_category.update(name: content.element.contents.first.essence.body, menu_id: self.page.find_elements({:only => ["restaurant_and_menu"]}).first.essences.first.menu_id)
     end
     self.category_and_item_updated= true
-    self.update(menu_item_id: @menu_item.id)
+    self.update(menu_item_id: @menu_item.id, essence_menu2_id: self.page.contents.find_by(name: "menu_name").essence.id)
   end
 
   def delete_if_trashed

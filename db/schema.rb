@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140818175932) do
+ActiveRecord::Schema.define(version: 20140821152607) do
 
   create_table "alchemy_attachments", force: true do |t|
     t.string   "name"
@@ -133,6 +133,7 @@ ActiveRecord::Schema.define(version: 20140818175932) do
     t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "essence_menu2_id"
   end
 
   create_table "alchemy_essence_menus", force: true do |t|
@@ -361,6 +362,7 @@ ActiveRecord::Schema.define(version: 20140818175932) do
     t.integer  "menu_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "order"
   end
 
   create_table "menu_item_prices", force: true do |t|
@@ -376,11 +378,30 @@ ActiveRecord::Schema.define(version: 20140818175932) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "price"
+    t.integer  "order"
   end
 
   create_table "menus", force: true do |t|
     t.string   "name"
     t.integer  "restaurant_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "order"
+  end
+
+  create_table "newsletter_recipients", force: true do |t|
+    t.string   "email",      null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone"
+    t.string   "zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "newsletters", force: true do |t|
+    t.text     "email_text"
+    t.string   "email_subject"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

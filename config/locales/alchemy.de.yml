@@ -23,7 +23,6 @@ de:
     # Hint texts for elements
     element_hints:
       article: "Dies ist ein Hinweistext für das Artikel Element. Dieser Text kann in der `config/locales/alchemy.de.yml` Datei angepasst werden."
-
     # Hint texts for contents
     content_hints:
       headline: "Dies ist ein einzeiliger unformatierter Text"

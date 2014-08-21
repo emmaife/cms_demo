@@ -47,5 +47,11 @@ module Admin
       end
   end
 
+class NewslettersController < Alchemy::Admin::ResourcesController
+  def new 
+    @newsletter = Newsletter.new
+  end
+  
+end
 
 end

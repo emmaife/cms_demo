@@ -1,0 +1,43 @@
+ 
+    <div class="page-title">
+        Sign Up
+    </div>
+    <div class="details_holder">
+      <div class="innerpage_banner">
+          <div class="banner_holder">
+               <%= render_elements from_page: 'sign_up'%>
+            </div>
+            <div class="common_text">
+              <div class="signup_text">Please sign up for important updates and information about Cock & Bull NYC</div>
+
+ <div class="signup_form">
+ <%=form_for @newsletter_recipient do |f|%>
+ <div class="text_holder"><%= f.label :email %></div>
+<div class="textbox"><%= f.text_field :email %></div>
+ <div class="text_holder"><%= f.label :first_name %></div>
+<div class="textbox"><%= f.text_field :first_name %></div>
+ <div class="text_holder"><%= f.label :last_name %></div>
+<div class="textbox"><%= f.text_field :last_name %></div>
+ <div class="text_holder"><%= f.label :phone %></div>
+<div class="textbox"><%= f.text_field :phone %></div>
+ <div class="text_holder"><%= f.label :zip %></div>
+<div class="textbox"><%= f.text_field :zip %></div>
+                   <%= f.submit %>
+                   <%end%>
+
+</div>
+
+ </div>          
+        </div>
+        <div class="make_reservation">
+          <div class="form_holder">
+              <div class="title"><strong>Make a Reservation</strong><br />Powered By OpenTable</div>
+                <div class="textbox ico1"><select name=""><option>00/00/0000</option></select></div>
+                <div class="textbox ico2"><select name=""><option>7:00 PM</option></select></div>
+                <div class="textbox ico3"><select name=""><option>2 People</option></select></div>
+                <div class="btn_holder"><input name="" type="submit" value="Find a Table" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> <strong>Cock &amp; Bull  &bull;  BEST BRITISH PUB NYC  &bull;  23 West 45th Street  &bull;  New York, NY 10036  &bull;  Get Map<br />Tel: 212.819.1900</strong><br /><br />&copy; 2013 Cock &amp; Bull  &bull;  Website Design By <a href="http://orphmedia.com/">Orphmedia</a></div>
+

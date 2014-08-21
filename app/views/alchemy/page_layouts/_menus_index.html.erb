@@ -1,73 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Menus</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/responsive.css" rel="stylesheet" type="text/css" />
 
-<script src="js/jquery_006.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- TOP MENU -->
-<script type="text/javascript" src="js/modernizr-2.0.6.min.js"></script>
-<script type="text/javascript"  src="js/tinynav.min.js"></script>
-<script type="text/javascript">
-  // TinyNav.js
-  $(function () {
-    $('.navigation').tinyNav();
-  });
-</script>
-
-<!--- slider banner -->
-<script type="text/javascript" src="js/jquery.innerfade.js"></script>
-<script type="text/javascript">
-$(document).ready(function() { 
-  $('#image_rotate').innerfade({ 
-    speed: 'slow', 
-    timeout: 4000, 
-    type: 'sequence', 
-    containerheight: '367px'
-  });
-});
-</script>
-
-<link rel="stylesheet" href="css/colorbox.css" type="text/css" />
-<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/jquery.pngFix.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/jquery.colorbox-min.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(document).pngFix();
-    $('a[href$=".pdf"]').each(function(){
-      $(this).attr("href", $(this).attr("href") + "#toolbar=0&navpanes=0").addClass("colorboxPDF");
-    });
-    $(".colorboxPDF").colorbox({width: "80%", height: "80%", iframe: true});
-    $(".colorboxMap").colorbox({width: "80%", height: "80%", iframe: true});  
-    $(".colorbox").colorbox();  
-    $(".colorboxEvent").colorbox({width: "80%", height: "80%", iframe: true});
-    $(".opentable").colorbox({width: "1100px", height: "700px", iframe: true}); 
-  });
-</script>
-</head>
-<body>
  <div class="page-title">
         Menus
     </div>
     <div class="details_holder">
       <div class="innerpage_banner">
           <div class="banner_holder">
-                <%= render_elements only: 'image_slide'%>
+                <%= render_elements only: 'image_slide', from_page: 'menus_index' %>
             </div>
             <div class="other_content">
 <%= render_elements only: 'menu_about', from_page: 'menus_index' %> <br /><br /> 
 
-<ul>
 <% Menu.all.each do |menu| %>
 
-<li><%= link_to menu.name, main_app.menu_path(menu) %></li>
+<p><%= link_to menu.name, '#', :data => {:colorbox => true, :colorbox_html => "#{render partial: "menus/show", locals: {menu: menu} }", :colorbox_width => '450px'} %></p>
+
 <%end%>
-</ul>
+
 
         </div>
         <div class="make_reservation">
@@ -81,5 +29,3 @@ $(document).ready(function() {
         </div>
     </div>
     <div class="footer"> <strong>Cock &amp; Bull  &bull;  BEST BRITISH PUB NYC  &bull;  23 West 45th Street  &bull;  New York, NY 10036  &bull;  Get Map<br />Tel: 212.819.1900</strong><br /><br />&copy; 2013 Cock &amp; Bull  &bull;  Website Design By <a href="http://orphmedia.com/">Orphmedia</a></div>
-</div>
-

@@ -1,8 +1,8 @@
 <%- cache(element) do -%>
   <%= element_view_for(element) do |el| -%>
-    <%= el.render :menu_category %>
+  </br> </br> <h2><%= el.render :menu_category %></h2>
     <%- element.contents.where(name: ['menu_item']).each do |content| -%>
-      <%= render_essence_view(content) %>
+   <p> <%= render_essence_view(content) %></p> </br>
     <%- end -%>
   <%- end -%>
 <%- end -%>

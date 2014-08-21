@@ -28,6 +28,11 @@ Alchemy::Modules.register_module({
         name: 'Menu Items',       # The name for the subnavigation tab (translated via I18n).
         controller: '/admin/menu_items',  # Controller that will be used.
         action: 'index'                 # Controller action that will be used.
+      },
+              {
+        name: 'Newsletter',       # The name for the subnavigation tab (translated via I18n).
+        controller: '/admin/newsletters',  # Controller that will be used.
+        action: 'index'                 # Controller action that will be used.
       }
     ]
   }

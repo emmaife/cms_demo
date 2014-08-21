@@ -3,7 +3,7 @@
   <td class="<%= attribute[:type] %> <%= attribute[:name] %>">
   <% if attribute[:type] == :boolean %>
     <%= render_icon !!resource.send(attribute[:name]) %>
-  <% elsif attribute[:type] == :integer%>
+  <% elsif attribute[:name] == "restaurant_id"%>
 <%= resource.restaurant.name %>
   <% else %>
       <%= render_attribute(resource, attribute) %>

@@ -32,6 +32,8 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+    config.action_mailer.delivery_method = :postmark
+    config.action_mailer.postmark_settings = { :api_key => "d3e73943-fe1e-4e76-8e96-eb51320530fa" }
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

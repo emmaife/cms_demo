@@ -12,34 +12,47 @@ class Alchemy::EssenceMenu < ActiveRecord::Base
   )
   attr_accessor :menu_parsed
   after_update :parse_menu_text, unless: :menu_parsed
+  before_destroy :delete_menu
 
+# parse_menu_text is called after essence menu is updated and creates menu, menu category, and menu items, and then updates self with menu_id. checks first line which = menu title (ie dinner, lunch) 
+# then checks for colon which indicates menu category. and checks for dash which indicates menu item (before dash) and menu price (after dash)
+# creates an array of each 
+  def parse_menu_text
+    @menu = Menu.find_by(id: self.menu_id)
+      if !@menu.nil? 
+        @menu.destroy
+      end
+    menu_arr = self.menu_text.split(/\n/)
+    menu_arr.each do |item|
+        if item == menu_arr[0]
+          @menu = Menu.create(name: item, restaurant_id: content.essence.restaurant_id, order: Menu.last.nil? ? 1 : Menu.last.order + 1)
+        elsif item.include?(':') 
+          @menu_category =  MenuCategory.create(name: item.split(":").first, menu_id: @menu.id)
+        elsif item.include?('-')
+          menu_item_and_price = item.split('-')
+          @menu_items = MenuItem.create(name: menu_item_and_price[0], price: menu_item_and_price[1], menu_category_id: MenuCategory.last.id) 
+        end
+      end
+      self.menu_parsed = true
+      self.update(menu_id: @menu.id)
+  end
 
-
-def parse_menu_text
-
-  @menu = Menu.find_by(id: self.menu_id)
-    if !@menu.nil? 
-      @menu.destroy
-    end
-  
-  # @menu_category = MenuCategory.find_by(id: self.menu_id)
-  # @menu_item = MenuItem.find_by(@menu_item.id)
-  menu_arr = self.menu_text.split(/\n/)
-
-  menu_arr.each do |item|
-      if item == menu_arr[0]
-        @menu = Menu.create(name: item, restaurant_id: content.essence.restaurant_id)
-      elsif item.include?(':')
-        @menu_category =  MenuCategory.create(name: item.split(":").first, menu_id: @menu.id)
-      elsif item.include?('-')
-        menu_item_and_price = item.split('-')
-        @menu_items = MenuItem.create(name: menu_item_and_price[0], price: menu_item_and_price[1], menu_category_id: MenuCategory.last.id) 
+# is called after essence menu is destroyed. deletes associated menu.
+  def delete_menu
+    @menu = Menu.find_by(self.menu_id)
+      if !@menu.nil?
+        @menu.destroy
       end
     end
-    self.menu_parsed = true
-    self.update(menu_id: @menu.id)
 
-end
+
+  # def delete_menu_if_trashed
+  #   @menu = Menu.find_by(self.menu_id)
+  #   if self.content.element.trashed? && !@menu.nil? 
+  #     @menu.destroy
+  #   end
+  # end
+
 #     end
 #   else
 #     if item == menu_arr[0]

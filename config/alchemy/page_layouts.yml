@@ -33,12 +33,15 @@
 
 - name: menus_index
   elements: [menu_about, image_slide]
+  cache: false
 
 - name: menu
   elements: [menu]
+  # autogenerate: [menu_example]
 
 - name: about_us
   elements: [about_us_text, about_us_images]
+  cache: false
 
 - name: sign_up
   elements: [image_slide]

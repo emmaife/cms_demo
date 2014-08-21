@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :newsletter_recipients
+
+  resources :newsletters
+  get 'signup' => 'newsletter_recipients#new'
+
     mount RailsAdmin::Engine => '/dev_admin', as: 'rails_admin'
 
       resources :restaurants
@@ -7,7 +12,7 @@ Rails.application.routes.draw do
   resources :menu_categories
 
   namespace :admin do
-    resources :restaurants, :menus, :menu_categories, :menu_items
+    resources :restaurants, :menus, :menu_categories, :menu_items, :newsletters
   end
 
   mount Alchemy::Engine => '/'

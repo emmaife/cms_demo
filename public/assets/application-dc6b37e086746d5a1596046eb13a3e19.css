@@ -1,0 +1,323 @@
+/* line 1, /Users/flatironstudent/Dev2/cms/cms-demo/app/assets/stylesheets/alchemy.elements.css.scss */
+article {
+  width: 50%;
+  font: 16px/20px Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  background: #f4f4f4;
+}
+/* line 9, /Users/flatironstudent/Dev2/cms/cms-demo/app/assets/stylesheets/alchemy.elements.css.scss */
+article h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: bold;
+}
+/* line 15, /Users/flatironstudent/Dev2/cms/cms-demo/app/assets/stylesheets/alchemy.elements.css.scss */
+article a {
+  color: #5588D3;
+}
+/* line 19, /Users/flatironstudent/Dev2/cms/cms-demo/app/assets/stylesheets/alchemy.elements.css.scss */
+article img {
+  max-width: 100%;
+}
+/* line 23, /Users/flatironstudent/Dev2/cms/cms-demo/app/assets/stylesheets/alchemy.elements.css.scss */
+article figure {
+  margin: 0;
+}
+/* line 27, /Users/flatironstudent/Dev2/cms/cms-demo/app/assets/stylesheets/alchemy.elements.css.scss */
+article figcaption {
+  font-size: 14px;
+}
+.page-title{height:48px;line-height:48px;width:593px;margin:0 auto;margin-bottom:4px;font-size:14px;color:#fff;text-transform:uppercase;text-decoration:none;background-image:url(../images/page-title-bg.png);border:1px solid #a18865;text-align:center;}
+.page-title a{color:#fff; text-decoration:none}
+.page-title a:hover{color:#ff0000;}
+.news-ticker{width:100%; float:left; padding:15px 0 0 0;}
+.news-ticker li{text-align:center;width:593px; list-style:none;}
+
+#news_ticker_1{position:relative;z-index:1;overflow:hidden; height:35px;}
+#news_ticker_1 .news-ticker-items-wrapper{margin-left:22px;margin-right:22px;overflow:hidden;}
+#news_ticker_1 .news-ticker-btn{position:absolute;z-index:2;left:0;top:0;width:22px;height:100%;background:url(../images/news-ticker-btn.png) no-repeat 0 center;display:none;cursor:pointer;}
+#news_ticker_1 .news-ticker-prev{}
+#news_ticker_1 .news-ticker-next{left:auto;right:0;background-position:-22px center;}	
+
+
+@media screen and (max-width:320px), (max-width:550px), (max-width:600px), (max-width:650px), (max-width:700px), (max-width:900px), (max-width:960px){
+
+.page-title{width:97%;}
+
+}
+@media screen and (max-width:320px), (max-width:550px), (max-width:600px), (max-width:650px), (max-width:700px), (max-width:900px), (max-width:960px){
+select {-webkit-appearance:none;}
+.tinynav {display:block;border:1px solid #a6a6a6; width:100%; -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; margin-bottom:10px; font-size:17px;font-family:'latobold'; color:#3d3d3d; padding:10px; background:url(../images/arrow1.png) no-repeat 98% 17px #fff; font-family:Arial, Helvetica, sans-serif;}
+.navigation {display:none;}
+}
+
+/*** for tablets/samsung***/
+@media only screen and (max-width:500px),(max-width:550px), (max-width:600px), {
+img{width:100%; display:block;}
+.details_holder{ width:96%; float:left; padding:0 2%}
+
+/*** HEADER ****/
+.header{ width:100%; height:auto;}
+.logo{ width:100%;padding:5px 0 0 0; height:auto;}
+.logo img{width:300px; margin:0 auto;}
+.header_content{ width:90%; float:left; padding:10px 5% 25px 5%;}
+.social_icon{width:100%; float:left; text-align:right;}
+.social_icon img{margin:10px 0 0 5px; width:20px; float:left;}
+
+/*** MAIN BANNER ***/
+.main_banner_content img{width:100%;}
+.center_img{width:33%; float:left; padding:10px 0}
+.main_banner_imags{width:33% !important; padding:10px 0;}
+
+/*** MAKE RESERVATION ***/
+.make_reservation{padding:10px 2%;}
+.make_reservation .form_holder .title{ width:100%; border-right:0px solid #000; border-bottom:1px solid #000;}
+.make_reservation .form_holder .textbox{width:50% !important; float:left; border-right:1px solid #000;}
+.make_reservation .form_holder .btn_holder{ width:40%; float:left; padding:8px 0 0 0; text-align:center;}
+
+.banner_holder{width:100% !important; padding:10px 0 !important;}
+.banner_holder img{width:95% !important;}
+.common_text{ width:90% !important; padding:20px 5% !important; margin-top:0 !important}
+.contact_text{ width:90% !important; padding:20px 5% !important; margin-top:0 !important}
+.other_content{ width:90% !important; padding:20px 5% !important; margin-top:0 !important}
+
+}
+
+/*** for ipad tablts***/
+@media only screen and  (max-width:650px), (max-width:700px), (max-width:760px), (max-width:960px), (max-width:100%) {
+img{width:100%; display:block;}
+.details_holder{ width:96%; float:left; padding:0 2%}
+
+/*** HEADER ****/
+.header{ width:100%; height:auto;}
+.logo{ width:100%;padding:5px 0 0 0; height:auto;}
+.logo img{width:300px; margin:0 auto;}
+.header_content{ width:90%; float:left; padding:10px 5% 25px 5%;}
+.social_icon{width:100%; float:left; text-align:right;}
+.social_icon img{margin:10px 0 0 5px; width:20px; float:left;}
+
+/*** MAIN BANNER ***/
+.main_banner_content img{width:100%;}
+.center_img{width:33%; float:left; padding:10px 0}
+.main_banner_imags{width:33% !important; padding:10px 0;}
+
+/*** MAKE RESERVATION ***/
+.make_reservation{padding:10px 2%;}
+.make_reservation .form_holder .title{ width:100%; border-right:0px solid #000; border-bottom:1px solid #000;}
+.make_reservation .form_holder .textbox{width:50% !important; float:left; border-right:1px solid #000;}
+.make_reservation .form_holder .btn_holder{ width:40%; float:left; padding:8px 0 0 0; text-align:center;}
+
+/*** INNER PAGE COMMON ***/
+.banner_holder{width:40%; padding:10px 0;}
+.banner_holder img{width:95%;}
+.common_text{ width:56%; padding:20px 2%; margin-top:0}
+.contact_text{ width:56%; padding:20px 2%; margin-top:0}
+.other_content{ width:56%; padding:20px 2%; margin-top:0}
+}
+
+/*** FOR MOBILE BROWERS ***/
+@media only screen and (max-width:300px), (max-width:320px),(max-width:400px), (max-width:450px){
+img{width:100%; display:block;}
+.logo img{width:100%; margin:0 auto;}
+
+/*** MAIN BANNER ***/
+.main_banner_content img{width:300px; margin:0 auto;}
+.center_img{width:100%; float:left;}
+.main_banner_imags{width:100%; padding:10px 0;}
+.main_banner_imags ul li{width:100%; float:left; height:363px;}
+
+/*** MAKE RESERVATION ***/
+.make_reservation .form_holder .title{text-align:center;}
+.make_reservation .form_holder .textbox{width:85% !important; border-right:0px solid #000; padding:5px 0; border-bottom:1px solid #000;}
+.make_reservation .form_holder .textbox select {border:1px solid #3b1c00; padding:2px 2px; font-size:12px; color:#333;width:auto; width:90%; -moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;background:url(../images/arrow1.png) no-repeat 95% 5px #fff;}
+.make_reservation .form_holder .btn_holder{ width:100%; padding:8px 0}
+
+/*** INNER PAGE COMMON ***/
+.banner_holder{width:100%; padding:10px 0;}
+.banner_holder img{width:95%; margin:0 auto;}
+.common_text{ width:90%; padding:20px 5%; margin-top:-100px !important;}
+
+.contact_text{ width:90%; padding:20px 5%; margin-top:-100px !important;}
+.other_content{ width:90%; padding:20px 5%; margin-top:-100px !important;}
+
+
+
+}
+body{margin:0; padding:0; background:url(../assets/bg.jpg); font-family:"Times New Roman", Times, serif; font-size:12px; color:#fff;}
+
+/*** COMMON CSS ***/
+#main{margin:0 auto; width:100%; height:auto; float:left;background:url(../assets/flag.png) repeat-y center 0;}
+img{border:0;}
+ul, h1, h2, h3, h4, h5{margin:0; padding:0; line-height:normal; width:100%;}
+ul li{list-style:none; float:left;}
+
+.details_holder{ width:900px; margin:0 auto;}
+
+/*** HEADER ****/
+.header{ width:100%; height:185px; float:left; background:url(../assets/header.png) repeat-x center bottom; text-align:center;}
+.logo{ width:96%; float:left; padding:5px 0 0 4%; height:120px;}
+.header_content{ width:90%; float:left; padding:20px 5% 0 5%;}
+.tinynav{display:none;}
+.navigation{ width:90%; float:left; text-align:center; text-transform:uppercase; font-weight:bold; font-size:11px; font-family:Georgia, "Times New Roman", Times, serif;}
+.navigation a{color:#ffd4b7; text-decoration:none; margin:0 10px;}
+.navigation a:hover{color:#c90a03;}
+.navigation .current{color:#c90a03;}
+.social_icon{width:10%; float:left; text-align:right;}
+.social_icon img{margin:0 0 0 5px;}
+
+/*** FOOTER ****/
+.footer{ width:100%; float:left; background:url(../assets/bottom-bar.png) no-repeat center 0; padding:70px 0 10px 0; text-align:center; color:#000;}
+.footer a{color:#000; text-decoration:none; margin:0 5px;}
+.footer a:hover{color:#c90a03;}
+
+/*** MAIN BANNER ***/
+.main_banner_content{width:100%; float:left; margin:5px 0; background:url(../assets/line1.jpg) repeat-x center 0; padding:3px 0;}
+.center_img{width:300px; float:left;}
+.main_banner_imags{width:300px; float:left;}
+.main_banner_imags ul li{width:100%; float:left; height:363px;}
+
+/*** MAKE RESERVATION ***/
+.make_reservation{width:96%; float:left; background:#000; padding:5px 2%; margin-bottom:4px; font-family:Arial, Helvetica, sans-serif; color:#333;}
+.make_reservation .form_holder{width:96%; padding:0 2%; float:left; background:#f6f6f3; border:1px solid #7c7872; -moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;}
+.make_reservation .form_holder .title{ width:184px; float:left; border-right:1px solid #000; padding:5px 0; font-size:10px; text-transform:uppercase; font-size:9px; letter-spacing:0.5px;}
+.make_reservation .form_holder .title strong{font-size:13px; text-transform:capitalize; font-weight:normal; letter-spacing:1px;}
+.make_reservation .form_holder .textbox{width:164px; float:left; border-right:1px solid #000;}
+.make_reservation .form_holder .textbox select{border:1px solid #3b1c00; padding:2px 2px; font-size:12px; color:#333;width:auto; width:90%; -moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.make_reservation .form_holder .textbox.ico1{background:url(../assets/ico-calendar.jpg) no-repeat 10px 8px; padding:7px 0 7px 40px; width:124px;}
+.make_reservation .form_holder .textbox.ico2{background:url(../assets/ico-time.jpg) no-repeat 10px 8px; padding:7px 0 7px 40px; width:124px;}
+.make_reservation .form_holder .textbox.ico3{background:url(../assets/ico-people.jpg) no-repeat 10px 8px; padding:7px 0 7px 40px; width:124px;}
+.make_reservation .form_holder .btn_holder{ width:135px; float:left; padding:8px 0 0 10px;}
+.make_reservation .form_holder .btn_holder input{border:0; background:url(../assets/button-red.png) no-repeat 0 0; width:135px; height:23px; text-align:center; color:#fff; font-size:12px; font-weight:bold; text-shadow:1px 1px 1px #000; cursor:pointer; /*padding:0 0 8px 0; */}
+.make_reservation .form_holder .btn_holder input:hover{background:url(../assets/button-red.png) no-repeat 0 -46px; color:#ff0000}
+
+/*** INNER PAGE COMMON ***/
+.innerpage_banner{width:100%; float:left; margin:5px 0; border-bottom:3px solid #c8c8c8;border-top:3px solid #c8c8c8;background:#5d595a;}
+.banner_holder{width:460px; float:left;}
+.banner_holder ul li{width:100%; float:left; height:367px;}
+.common_text{ width:400px; float:left; padding:20px; line-height:20px;}
+.common_text a{color:#add8e6; text-decoration:none;}
+.common_text a:hover{color:#ff0000;}
+
+/*** SIGNUP FORM ***/
+.signup_text{width:100%; float:left; padding:0 0 10px 0;}
+.signup_form{width:100%; float:left;}
+.signup_form .text_holder{width:25%; float:left; height:35px;}
+.signup_form .textbox{width:75%; float:left; height:35px;}
+.signup_form .textbox input{border:0; background:#fff; padding:5px; font-size:13px; color:#666; width:80%}
+.signup_form .textbox input.btn_style{border:0; background:#a80f00; padding:5px 15px; font-size:13px; color:#fff; cursor:pointer; font-weight:bold; text-shadow:1px 1px 1px #000; width:auto;}
+
+.contact_text{ width:400px; float:left; padding:20px; line-height:normal; text-align:center;}
+.contact_text a{color:#add8e6; text-decoration:none; text-transform:uppercase;}
+.contact_text a:hover{color:#ff0000;}
+.contact_text span{color:#f4cca3; text-transform:uppercase}
+
+.other_content{ width:400px; float:left; padding:20px 20px 0 20px; line-height:20px; height:347px; /*overflow-x:hidden; overflow-y:scroll*/}
+.other_content a{color:#add8e6; text-decoration:none; text-transform:uppercase; font-weight:bold; line-height:25px;}
+.other_content a:hover{color:#ff0000;}
+.other_content span{color:#f4cca3; text-transform:uppercase}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(/assets/colorbox-rails/overlay.png) repeat 0 0;}
+#colorbox{}
+    #cboxTopLeft{width:21px; height:21px; background:url(/assets/colorbox-rails/controls.png) no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url(/assets/colorbox-rails/controls.png) no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(/assets/colorbox-rails/controls.png) no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url(/assets/colorbox-rails/controls.png) no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url(/assets/colorbox-rails/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(/assets/colorbox-rails/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(/assets/colorbox-rails/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(/assets/colorbox-rails/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url(/assets/colorbox-rails/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(/assets/colorbox-rails/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxLoadingOverlay{background:url(/assets/colorbox-rails/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(/assets/colorbox-rails/loading.gif) no-repeat center center;}
+        #cboxClose{border: none; position:absolute; bottom:0; right:0; background:url(/assets/colorbox-rails/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/*
+  The following provides PNG transparency support for IE6
+  Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
+*/
+.cboxIE6 #cboxTopLeft{background:url(/assets/colorbox-rails/ie6/borderTopLeft.png);}
+.cboxIE6 #cboxTopCenter{background:url(/assets/colorbox-rails/ie6/borderTopCenter.png);}
+.cboxIE6 #cboxTopRight{background:url(/assets/colorbox-rails/ie6/borderTopRight.png);}
+.cboxIE6 #cboxBottomLeft{background:url(/assets/colorbox-rails/ie6/borderBottomLeft.png);}
+.cboxIE6 #cboxBottomCenter{background:url(/assets/colorbox-rails/ie6/borderBottomCenter.png);}
+.cboxIE6 #cboxBottomRight{background:url(/assets/colorbox-rails/ie6/borderBottomRight.png);}
+.cboxIE6 #cboxMiddleLeft{background:url(/assets/colorbox-rails/ie6/borderMiddleLeft.png);}
+.cboxIE6 #cboxMiddleRight{background:url(/assets/colorbox-rails/ie6/borderMiddleRight.png);}
+
+.cboxIE6 #cboxTopLeft,
+.cboxIE6 #cboxTopCenter,
+.cboxIE6 #cboxTopRight,
+.cboxIE6 #cboxBottomLeft,
+.cboxIE6 #cboxBottomCenter,
+.cboxIE6 #cboxBottomRight,
+.cboxIE6 #cboxMiddleLeft,
+.cboxIE6 #cboxMiddleRight {
+    _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}
+/*
+
+*/

@@ -1,0 +1,13 @@
+<center>
+  <div class="innerpage_banner">
+
+<h1><%= menu.name%></h1></br>
+<%menu.menu_categories.each do |category|%>
+  <h2><%=category.name%></h2></br>
+  <%category.menu_items.each do |item|%>
+  <p><%=item.name%> - $<%= "%.2f" % item.price%></p>
+  <%end%>
+<%end%>
+
+</div>
+</center>

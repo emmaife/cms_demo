@@ -2,7 +2,7 @@ class MenusController < ApplicationController
   before_action :set_menu, only: [:show]
 
 def index
-  @menus = Menu.all
+  @menus = Menu.all.sort {|a, b| a.order <=> b.order}
 end
 
 def show

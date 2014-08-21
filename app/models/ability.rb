@@ -12,6 +12,8 @@ class Ability
       can :manage, :admin_menu_items
       can :manage, MenuCategory
       can :manage, :admin_menu_categories
+      can :manage, Newsletter
+      can :manage, :admin_newsletters
     end
   end
  
