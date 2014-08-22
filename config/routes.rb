@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
     mount RailsAdmin::Engine => '/dev_admin', as: 'rails_admin'
 
-      resources :restaurants
+  resources :restaurants
   resources :menus
   resources :menu_items
   resources :menu_categories

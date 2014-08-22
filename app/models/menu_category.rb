@@ -5,4 +5,5 @@ class MenuCategory < ActiveRecord::Base
   def name_with_details
     "#{self.menu.name} - #{name} - #{self.menu.restaurant.name}"
   end
+  
 end

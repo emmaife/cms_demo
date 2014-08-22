@@ -8,8 +8,6 @@ class Menu < ActiveRecord::Base
     "#{name} - #{self.restaurant.name}" 
   end
 
-
-
   # def delete_self
   #    essence =  Alchemy::EssenceMenu2.find_by(menu_id: self.id)
   #     if !essence.nil?

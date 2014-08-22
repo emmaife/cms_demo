@@ -6,6 +6,12 @@
   Please consult Alchemy::Content.rb docs for further methods on the content object
 %>
 
+<p><strong>In Order To Be Parsed Out Correctly, Follow These Guidelines:</strong></p>
+<p><strong><u>Menu Type</u></strong> <i>(i.e. Dinner) Always The First Line </i></p> 
+<p><strong><u>Menu Category:</u></strong> <i>(i.e. Entree) Must Be Followed by a colon(':')</i></p>
+<p><strong><u>Menu Item - Price</u></strong> <i>Separate Menu Item and Its Price With a Dash ('-')</i></p>
+
+
 <%= select_tag content.form_field_name(:restaurant_id),
     options_for_select(Restaurant.all.map {
       |p| [p.name, p.id] }, content.essence.restaurant_id),
@@ -16,9 +22,6 @@
     content.essence.menu_text,
     :id => content.form_field_id(:menu_text)
   ) %>
-
-
-
 
 
 

@@ -32,6 +32,12 @@
   - name: menu
     type: EssenceMenu
 
+# - name: example_menu
+#   unique: true
+#   contents:
+#   - name: example_text
+#     type: EssenceText
+
 - name: menu_about
   unique: true
   contents:

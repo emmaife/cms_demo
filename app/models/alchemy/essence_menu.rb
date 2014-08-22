@@ -46,7 +46,6 @@ class Alchemy::EssenceMenu < ActiveRecord::Base
       end
     end
 
-
   # def delete_menu_if_trashed
   #   @menu = Menu.find_by(self.menu_id)
   #   if self.content.element.trashed? && !@menu.nil? 
