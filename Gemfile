@@ -33,6 +33,13 @@ gem 'alchemy_cms', github: 'magiclabs/alchemy_cms', branch: 'master'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'alchemy-devise'
 gem 'postmark-rails'
+
+gem 'twitter'
+gem "koala"
+gem 'instagram', '~> 1.1.2'
+
+gem 'twitter-text'
+gem 'pry', '~> 0.10.1'
 # Use unicorn as the app server
 # gem 'unicorn'
 

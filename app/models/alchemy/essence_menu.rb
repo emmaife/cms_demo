@@ -13,7 +13,7 @@ class Alchemy::EssenceMenu < ActiveRecord::Base
   attr_accessor :menu_parsed
   after_update :parse_menu_text, unless: :menu_parsed
   before_destroy :delete_menu
-
+require 'pry'
 
   def parse_menu_text
     # parse_menu_text is called after essence menu is updated and creates menu, menu category, 
@@ -26,7 +26,7 @@ class Alchemy::EssenceMenu < ActiveRecord::Base
     menu_arr.each do |item|
         if item == menu_arr[0]
           # checks first line and sets it equal to menu title (ie dinner, lunch) 
-          @menu = Menu.create(name: item, restaurant_id: content.essence.restaurant_id, order: Menu.last.nil? ? 1 : Menu.last.order + 1)
+          @menu = Menu.create(name: item, restaurant_id: content.essence.restaurant_id, order: Menu.last.nil? ? 1 : Menu.last.order + 1, post_to_fb: content.essence.post_to_fb, fb_post_text: content.essence.fb_post_text, post_to_twitter: content.essence.post_to_twitter, tweet: content.essence.tweet)
         elsif item.include?(':') # then checks for colon which indicates menu category.
           @menu_category =  MenuCategory.create(name: item.split(":").first, menu_id: @menu.id)
         elsif item.include?('-') #checks for dash which indicates menu item (before dash) and menu price (after dash)

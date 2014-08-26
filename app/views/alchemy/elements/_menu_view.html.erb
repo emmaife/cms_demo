@@ -1,5 +1,8 @@
 <%- cache(element) do -%>
   <%= element_view_for(element) do |el| -%>
-    <%= el.render :menu %>
+    <div class="menu">
+      <%= el.render :menu %>
+    </div>
+
   <%- end -%>
 <%- end -%>

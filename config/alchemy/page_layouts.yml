@@ -13,10 +13,6 @@
 - name: locations
   cache: false
 
-- name: cell_test
-  cells: [menu_cell]
-  elements: [restaurant_and_menu, menu_categories_and_items]
-
 - name: location_restaurants
   cache: false
 
@@ -24,12 +20,6 @@
   cache: false
   elements: [restaurant_info]
 
-#### LAYOUT/PARTIAL PAGES ####
-
-- name: header
-  elements: [news_ticker]
-  layoutpage: true
-  cache: false
 
 - name: menus_index
   elements: [menu_about, image_slide]

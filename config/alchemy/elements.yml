@@ -31,6 +31,8 @@
   contents:
   - name: menu
     type: EssenceMenu
+  - name: twitter_media
+    type: EssencePicture
 
 # - name: example_menu
 #   unique: true
@@ -58,10 +60,10 @@
   - name: restaurant_name
     type: EssenceRestaurant
 
-- name: heading
-  contents:
-  - name: heading
-    type: EssenceText
+# - name: heading
+#   contents:
+#   - name: heading
+#     type: EssenceText
 
 
 - name: menu_index_pictures

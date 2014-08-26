@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821152607) do
+ActiveRecord::Schema.define(version: 20140825150124) do
 
   create_table "alchemy_attachments", force: true do |t|
     t.string   "name"
@@ -143,6 +143,10 @@ ActiveRecord::Schema.define(version: 20140821152607) do
     t.string   "name"
     t.text     "menu_text"
     t.integer  "restaurant_id"
+    t.boolean  "post_to_fb"
+    t.text     "fb_post_text"
+    t.boolean  "post_to_twitter"
+    t.text     "tweet"
   end
 
   create_table "alchemy_essence_pictures", force: true do |t|
@@ -387,6 +391,10 @@ ActiveRecord::Schema.define(version: 20140821152607) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "order"
+    t.boolean  "post_to_fb"
+    t.text     "fb_post_text"
+    t.boolean  "post_to_twitter"
+    t.text     "tweet"
   end
 
   create_table "newsletter_recipients", force: true do |t|

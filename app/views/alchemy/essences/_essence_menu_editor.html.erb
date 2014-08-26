@@ -6,23 +6,83 @@
   Please consult Alchemy::Content.rb docs for further methods on the content object
 %>
 
-<p><strong>In Order To Be Parsed Out Correctly, Follow These Guidelines:</strong></p>
+<center><p><strong>Follow These Guidelines When Entering A Menu:</strong></p></center>
 <p><strong><u>Menu Type</u></strong> <i>(i.e. Dinner) Always The First Line </i></p> 
 <p><strong><u>Menu Category:</u></strong> <i>(i.e. Entree) Must Be Followed by a colon(':')</i></p>
-<p><strong><u>Menu Item - Price</u></strong> <i>Separate Menu Item and Its Price With a Dash ('-')</i></p>
+<strong><u>Menu Item - Price</u></strong> <i>Separate Menu Item and Its Price With a Dash ('-')</i></br>
+<center><a href = '/assets/menu_instructions.png' target = '_blank'>Click For an Example</a></center></br></br></br>
+<% cache(content) do %>
 
-
-<%= select_tag content.form_field_name(:restaurant_id),
+Select Restaurant: <%= select_tag content.form_field_name(:restaurant_id),
     options_for_select(Restaurant.all.map {
       |p| [p.name, p.id] }, content.essence.restaurant_id),
-      :id => content.form_field_id(:restaurant_id) %>
+      :id => content.form_field_id(:restaurant_id) %></br>
 
-   <%= text_area_tag(
+   Enter Menu: <%= text_area_tag(
     content.form_field_name(:menu_text),
     content.essence.menu_text,
     :id => content.form_field_id(:menu_text)
-  ) %>
+  ) %> </br></br>
 
+<strong> Post Update To Facebook?</strong>
+  <% if content.essence.post_to_fb == true %>
+      <%= check_box "contents[#{content.id}]", :post_to_fb, {:checked => true} %>
+       <%else%>
+   <%= check_box "contents[#{content.id}]", :post_to_fb, {:checked => false} %>
+     <%end%></br></br>
+     
+   <div id = "fb_post_text" style = "display:none;">
+  Enter Status: <%= text_area_tag(
+      content.form_field_name(:fb_post_text),
+      content.essence.fb_post_text,
+      :id => content.form_field_id(:fb_post_text)
+    )%>
+  </div></br></br>
+
+
+<strong> Post Update To Twitter?</strong>
+  <% if content.essence.post_to_twitter == true %>
+    <%= check_box "contents[#{content.id}]", :post_to_twitter, {:checked => true} %>
+    <%else%>
+     <%= check_box "contents[#{content.id}]", :post_to_twitter, {:checked => false} %>
+      <%end%>
+
+      <div id = "tweet" style = "display:none;">
+      Enter Status: <%= text_field_tag(
+          content.form_field_name(:tweet),
+          content.essence.fb_post_text,
+          :id => content.form_field_id(:tweet)
+        )%>
+      </div>
+
+<%end%>
+
+  
+  <script type="text/javascript">
+
+  // var checkbox = document.getElementById('<%=content.form_field_id(:post_to_fb)%>');
+  // var details_div = document.getElementById('fb_post_text');
+  // checkbox.onchange = function() {
+  //    if(this.checked) {
+  //      details_div.style['display'] = 'block';
+  //    } else {
+  //      details_div.style['display'] = 'none';
+  //    }
+  // };
+
+
+  // var checkbox2 = document.getElementById('<%=content.form_field_id(:post_to_twitter)%>');
+  // var details_div2 = document.getElementById('tweet');
+  // checkbox2.onchange = function() {
+  //    if(this.checked) {
+  //      details_div2.style['display'] = 'block';
+  //    } else {
+  //      details_div2.style['display'] = 'none';
+  //    }
+  // };
+
+
+</script>
 
 
 

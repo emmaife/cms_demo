@@ -1,3 +1,35 @@
 <%= element_editor_for(element) do |el| -%>
   <%= el.edit :menu %>
+  <%# if element.contents.find_by(essence_type: "Alchemy::EssenceMenu").essence.content.form_field_id%>
+  <div id = "twitter_media" style = "display: none">
+  <%= el.edit :twitter_media %>
+</div>
 <%- end -%>
+
+<script type="text/javascript">
+
+  var fb_checkbox = document.getElementById("<%=element.contents.find_by(essence_type: 'Alchemy::EssenceMenu').essence.content.form_field_id(:post_to_fb)%>");
+  var fb_details_div = document.getElementById('fb_post_text');
+
+  fb_checkbox.onchange = function() {
+     if(this.checked) {
+       fb_details_div.style['display'] = 'block';
+     } else {
+       fb_details_div.style['display'] = 'none';
+     }
+  };
+
+  var twitter_checkbox = document.getElementById("<%=element.contents.find_by(essence_type: 'Alchemy::EssenceMenu').essence.content.form_field_id(:post_to_twitter)%>");
+  var twitter_details_div = document.getElementById('tweet');
+  var twitter_media_div = document.getElementById('twitter_media');
+
+  twitter_checkbox.onchange = function() {
+     if(this.checked) {
+       twitter_details_div.style['display'] = 'block';
+       twitter_media_div.style['display'] = 'block';
+
+     } else {
+       twitter_details_div.style['display'] = 'none';
+     }
+  };
+  </script>
